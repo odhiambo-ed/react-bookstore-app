@@ -1,40 +1,35 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# React Bookstore App
 
-> Description the project.
+> This is a bookstore app build with React.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Major languages -`JavaScript`, `HTML`, `CSS`
+- Frameworks - `React`, `Material-UI`
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](http://edwardodhiambo.me/react-bookstore-app/)
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-
-### Setup
+Use this url to clone the repo on your terminal: https://github.com/white3d/react-bookstore-app.git
 
 ### Install
+After cloning the repo, change dir to the project folder then run the following:
 
-### Usage
-
-### Run tests
-
-### Deployment
+ [x] npm install
+ [x] npm install @mui/material @emotion/react @emotion/styled
+ [x] npm install @mui/icons-material
+ [x] npm start
 
 
 
@@ -46,17 +41,12 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/white3d/react-bookstore-app/issues).
 
 ## Show your support
 
