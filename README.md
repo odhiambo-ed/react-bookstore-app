@@ -26,10 +26,10 @@ Use this url to clone the repo on your terminal: https://github.com/white3d/reac
 ### Install
 After cloning the repo, change dir to the project folder then run the following:
 
- [x] npm install
- [x] npm install @mui/material @emotion/react @emotion/styled
- [x] npm install @mui/icons-material
- [x] npm start
+ `npm install`
+ `npm install @mui/material @emotion/react @emotion/styled`
+ `npm install @mui/icons-material`
+ `npm start`
 
 
 
