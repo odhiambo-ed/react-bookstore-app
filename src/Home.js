@@ -1,49 +1,27 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Nav from './components/Nav';
 import Books from './components/Books';
 import AddBooks from './components/AddBooks';
+import Footer from './components/Footer';
 
 function Home() {
-  const data = [
-    {
-      id: 1,
-      genre: 'Action',
-      title: 'The Hunger Games',
-      director: 'Suzanne Collins',
-      percent: 64,
-      chapter: 'Chapter 17',
-    },
-    {
-      id: 2,
-      genre: 'Science Fiction',
-      title: 'Dune',
-      director: 'Frank Herbet',
-      percent: 8,
-      chapter: 'Chapter 3: A lesson learned',
-    },
-    {
-      id: 3,
-      genre: 'Economy',
-      title: 'Capital',
-      director: 'Suzanne Collins',
-      percent: 20,
-      chapter: 'Introduction',
-    },
-  ];
+  const state = useSelector((state) => state);
+  const data = state.booksReducer;
   return (
     <div>
       <Nav />
       {data.map((item) => (
         <Books
-          key={item.id}
-          genre={item.genre}
+          key={item.item_id}
+          id={item.item_id}
+          author={item.author}
+          category={item.category}
           title={item.title}
-          director={item.director}
-          percent={item.percent}
-          chapter={item.chapter}
         />
       ))}
       <AddBooks />
+      <Footer recents="facebook" favorites="twitter" nearby="google" />
     </div>
   );
 }
