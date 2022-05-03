@@ -48,7 +48,7 @@ const ResponsiveAppBar = () => {
               fontWeight: 'bold',
             }}
           >
-            Bookstore CMS
+            Edward-Bookstore App
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
