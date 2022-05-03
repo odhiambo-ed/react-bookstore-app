@@ -2,15 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Button } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
 function Books({
-  genre, title, director, percent, chapter,
+  category, title, id, author,
 }) {
+  const dispatch = useDispatch();
+
+  const remBook = () => {
+    dispatch(removeBook(id));
+  };
   return (
-    <div style={{
-      marginBottom: 10,
-      marginTop: 20,
-    }}
+    <div
+      style={{
+        marginBottom: 10,
+        marginTop: 20,
+      }}
     >
       <div
         style={{
@@ -35,7 +43,7 @@ function Books({
               color: 'gray',
             }}
           >
-            {genre}
+            {category}
           </h3>
           <h1
             style={{
@@ -49,7 +57,7 @@ function Books({
               color: '#189bed',
             }}
           >
-            {director}
+            {author}
           </h3>
         </div>
 
@@ -61,7 +69,7 @@ function Books({
             flexDirection: 'row',
           }}
         >
-          <CircularProgress size={70} variant="determinate" value={percent} />
+          <CircularProgress size={70} variant="determinate" value={23} />
           <div
             style={{
               marginLeft: 20,
@@ -76,7 +84,7 @@ function Books({
                 marginBottom: -2,
               }}
             >
-              {`${percent} %`}
+              {`${23} %`}
             </h1>
             <h3
               style={{
@@ -117,7 +125,7 @@ function Books({
                 marginTop: -2,
               }}
             >
-              {chapter}
+              Twenty Five
             </h2>
             <Button
               style={{
@@ -126,7 +134,7 @@ function Books({
               }}
               variant="contained"
             >
-              Add Book
+              Update
             </Button>
           </div>
         </div>
@@ -155,13 +163,21 @@ function Books({
             height: 20,
           }}
         />
-        <h4
+        <button
+          type="button"
           style={{
+            cursor: 'pointer',
             color: '#189bed',
+            border: 'none',
+            outline: 'none',
+            background: 'none',
+            fontSize: 16,
+            fontWeight: 'bold',
           }}
+          onClick={remBook}
         >
           Remove
-        </h4>
+        </button>
         <div
           style={{
             backgroundColor: 'gray',
@@ -184,9 +200,8 @@ function Books({
 export default Books;
 
 Books.propTypes = {
-  genre: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  director: PropTypes.string.isRequired,
-  percent: PropTypes.string.isRequired,
-  chapter: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
 };
