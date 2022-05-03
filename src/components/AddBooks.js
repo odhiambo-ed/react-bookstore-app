@@ -1,57 +1,51 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import OutlinedInput from '@mui/material/OutlinedInput';
+import React, { useState } from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { Box, Button, TextField } from '@mui/material';
-
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
-
-const names = [
-  'Action',
-  'Comedy',
-  'Horror',
-  'Science Fiction',
-];
-
-function getStyles(name, personName, theme) {
-  return {
-    fontWeight:
-            personName.indexOf(name) === -1
-              ? theme.typography.fontWeightRegular
-              : theme.typography.fontWeightMedium,
-  };
-}
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
 
 export default function MultipleSelect() {
-  const theme = useTheme();
-  const [personName, setPersonName] = React.useState([]);
+  const [name, setName] = useState('');
+  const [category, setCategory] = useState('');
+
+  const categories = [
+    { id: 1, categories: 'Horror' },
+    { id: 2, categories: 'Fiction' },
+    { id: 3, categories: 'Thriller' },
+    { id: 4, categories: 'Dark' },
+    { id: 5, categories: 'Historical' },
+    { id: 6, categories: 'Romance' },
+    { id: 7, categories: 'Science Fiction' },
+    { id: 8, categories: 'Fantasy' },
+    { id: 9, categories: 'Dystopian' },
+    { id: 10, categories: 'Realist' },
+  ];
 
   const handleChange = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setPersonName(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
-    );
+    setCategory(event.target.value);
+  };
+
+  const dispatch = useDispatch();
+
+  const sendBook = () => {
+    const newBook = {
+      id: Math.random() * 232323,
+      author: 'Allan Muller',
+      title: name,
+      category,
+    };
+    dispatch(addBook(newBook));
+    setName('');
   };
 
   return (
-    <div style={{
-      marginBottom: 30,
-    }}
+    <div
+      style={{
+        marginBottom: 30,
+      }}
     >
       <h1
         style={{
@@ -78,31 +72,36 @@ export default function MultipleSelect() {
             maxWidth: '100%',
           }}
         >
-          <TextField fullWidth label="Book title" id="fullWidth" />
+          <TextField
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            fullWidth
+            label="Book title"
+            id="fullWidth"
+          />
         </Box>
-        <FormControl sx={{ m: 1, width: 300 }}>
-          <InputLabel id="demo-multiple-name-label">Category</InputLabel>
-          <Select
-            labelId="demo-multiple-name-label"
-            id="demo-multiple-name"
-            multiple
-            value={personName}
-            onChange={handleChange}
-            input={<OutlinedInput label="Category" />}
-            MenuProps={MenuProps}
-          >
-            {names.map((name) => (
-              <MenuItem
-                key={name}
-                value={name}
-                style={getStyles(name, personName, theme)}
-              >
-                {name}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+        <Box sx={{ minWidth: 250 }}>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Category</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={category}
+              label="Category"
+              onChange={handleChange}
+            >
+              {categories.map((item) => (
+                <MenuItem key={item.id} value={item.categories}>
+                  {item.categories}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </Box>
         <Button
+          onClick={() => {
+            sendBook();
+          }}
           style={{
             paddingTop: 15,
             paddingBottom: 15,
