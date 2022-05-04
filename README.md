@@ -4,8 +4,7 @@
 
 > This is a bookstore app build with React.
 
-![App Screenshot](app_screenshot.png)
-
+![App Screenshot](app_screenshot1.png)
 
 ## Built With
 
