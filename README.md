@@ -14,7 +14,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](http://edwardodhiambo.me/react-bookstore-app/)
+[Live Demo Link](hhttps://react-bookstore-app-ecru.vercel.app)
 
 
 ## Getting Started
