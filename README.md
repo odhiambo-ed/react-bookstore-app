@@ -4,6 +4,7 @@
 
 > This is a bookstore app build with React.
 
+![App Screenshot](app_screenshot1.png)
 
 ## Built With
 
@@ -12,7 +13,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](http://edwardodhiambo.me/react-bookstore-app/)
+[Live Demo Link](https://react-bookstore-orpin.vercel.app)
 
 
 ## Getting Started
@@ -26,20 +27,24 @@ Use this url to clone the repo on your terminal: https://github.com/white3d/reac
 ### Install
 After cloning the repo, change dir to the project folder then run the following:
 
- `npm install`
- `npm install @mui/material @emotion/react @emotion/styled`
- `npm install @mui/icons-material`
- `npm start`
+[X] `npm install`
+[X] `npm install @mui/material @emotion/react @emotion/styled`
+[X] `npm install @mui/icons-material`
+[X] `npm install react-redux`
+[X] `npm i redux-logger redux-thunk axios`
+[X] `npm start`
 
 
 
 ## Authors
 
-👤 *Author1*
+👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+[Portfolio Website](https://edwardodhiambo.me/My-Portfolio/)
+
+- GitHub: [@whit3d](https://github.com/white3d)
+- Twitter: [@odhiambo_ed](https://twitter.com/odhiambo_ed)
+- LinkedIn: [Edward Odhiambo](https://www.linkedin.com/in/edward-odhiambo-6a462a21b/)
 
 
 ## 🤝 Contributing
@@ -50,7 +55,7 @@ Feel free to check the [issues page](https://github.com/white3d/react-bookstore-
 
 ## Show your support
 
-Give a ⭐ if you like this project!
+Give a ⭐ if you like this project! Thank you!
 
 ## Acknowledgments
 
