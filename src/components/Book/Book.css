@@ -1,0 +1,67 @@
+.progress {
+  text-align: left;
+  color: #121212;
+  margin-left: 1.35rem;
+  line-height: normal;
+  gap: 0.063rem;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
+}
+
+.percent {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.completed {
+  opacity: 0.5;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.current {
+  opacity: 0.5;
+}
+
+button {
+  background-color: #0290ff;
+  color: #fff;
+  padding: 0.5rem 1.35rem;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.remove-btn,
+.comment-btn,
+.edit-btn,
+.line {
+  background-color: transparent;
+  color: #4386bf;
+  padding: 0;
+  margin: 30px;
+  text-align: left;
+}
+
+.line {
+  color: #121212;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.author {
+  color: #4386bf;
+}
+
+.category {
+  opacity: 0.5;
+}
+
+.vl {
+  border-left: 2px solid rgb(196 194 194);
+  height: 25vh;
+  margin-right: 40px;
+  margin-left: 20px;
+}
