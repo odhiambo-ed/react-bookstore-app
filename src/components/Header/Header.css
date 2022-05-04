@@ -1,0 +1,66 @@
+body {
+  background-color: rgb(0 0 0 / 5%);
+}
+
+.header-body {
+  margin: 0 0 2.375rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.813rem 0 1.813rem 6.25rem;
+}
+
+.fa-icon {
+  color: #0290ff;
+  padding: 7px;
+}
+
+.center {
+  background: #fff;
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6.25rem;
+}
+
+.header {
+  width: 15rem;
+  height: 2.313rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2.938rem;
+}
+
+.link {
+  height: 1rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
+  color: #121212;
+  text-decoration: none;
+}
+
+.link2 {
+  opacity: 0.5;
+}
