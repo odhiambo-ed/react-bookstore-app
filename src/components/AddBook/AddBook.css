@@ -1,0 +1,28 @@
+.form-header {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #121212;
+  opacity: 0.5;
+}
+
+form {
+  font-family: Montserrat, sans-serif;
+  text-align: left;
+  padding: 0 6.25rem;
+  margin-bottom: 2rem;
+}
+
+input {
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-family: Montserrat, sans-serif;
+}
+
+#title {
+  width: 35vw;
+}
+
+#category {
+  width: 22vw;
+}
