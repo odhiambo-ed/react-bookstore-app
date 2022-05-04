@@ -14,7 +14,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](hhttps://react-bookstore-app-ecru.vercel.app)
+[Live Demo Link](https://react-bookstore-orpin.vercel.app)
 
 
 ## Getting Started
